@@ -1,0 +1,8 @@
+POST https://phonebook-riue.onrender.com/api/persons
+Content-Type: application/json
+
+{
+    "id":21,
+    "name":"cko",
+    "number":122345
+}
