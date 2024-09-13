@@ -71,7 +71,7 @@ const generateId = () => Math.floor(Math.random() * 10000)
 
 app.post('/api/persons', (request, response) => {
     const body = request.body
-    const id = generateId()
+    body.id = generateId()
     const findName = persons.some(pers => pers.name === body.name)
     if (!body.name || !body.number) {
         return response.status(400).json({ error: 'content missing' })
@@ -81,7 +81,7 @@ app.post('/api/persons', (request, response) => {
     }
 
     const person = {
-        id: id,
+        id: body.id,
         name: body.name,
         number: body.number
     }
