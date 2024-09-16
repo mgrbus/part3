@@ -48,6 +48,9 @@ const PersonForm = ({ setMessage, persons, newName, newNumber, setNewName, setNe
                     setNewName('')
                     setNewNumber('')
                 })
+                .catch(error => {
+                    setMessage('mijsu')
+                })
         }
     }
 
