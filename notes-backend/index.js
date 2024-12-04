@@ -32,6 +32,7 @@ const requestLogger = (req, res, next) => {
 }
 
 app.use(requestLogger)
+app.use(express.static('dist'))
 
 const unknownEndpoint = (req, res) => {
     res.status(404).send({ error: 'unknown enpoint' })
